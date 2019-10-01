@@ -14,7 +14,7 @@ export class DataReaderService {
   }
 
   public getJSON(filename) {
-    return this.http.get("assets/"+filename);
+    return this.http.get("/api/"+filename);
   }
 
 }

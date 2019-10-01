@@ -26,9 +26,11 @@ export class AdminComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loginProcess.update();
   }
 
   authenticate(user) {
+    this.loginProcess.update();
     if (!this.loginProcess.authenticate(user))
       this.wrong = true;
     else {

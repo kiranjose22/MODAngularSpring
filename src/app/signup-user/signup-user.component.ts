@@ -23,7 +23,8 @@ export class SignupUserComponent implements OnInit {
       email : new FormControl('',[Validators.required,Validators.email]),
       phone : new FormControl(''),
       password : new FormControl('',Validators.required),
-      role: new FormControl('user')
+      role: new FormControl('user'),
+      status: new FormControl('unblocked')
     });
    }
 

@@ -28,7 +28,7 @@ export class SearchResultComponent implements OnInit {
 
       time: new FormControl('')
     });
-    this.dataReader.getJSON('search-result.json').subscribe(data => {
+    this.dataReader.getJSON('results').subscribe(data => {
       console.log(data);
       this.searchData = data
     });
