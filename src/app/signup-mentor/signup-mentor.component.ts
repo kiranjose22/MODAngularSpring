@@ -30,12 +30,13 @@ export class SignupMentorComponent implements OnInit {
       
       linkedin: new FormControl(''),
       skills: new FormControl(''),
-      videos: new FormControl(''),
-      blogs: new FormControl(''),
-      ppts: new FormControl(''),
-      demos: new FormControl(''),
+      videos: new FormControl(false),
+      blogs: new FormControl(false),
+      ppts: new FormControl(false),
+      demos: new FormControl(false),
 
-      role: new FormControl('mentor')
+      role: new FormControl('mentor'),
+      status: new FormControl('unblocked')
     });
     // this.materialForm = new FormGroup({
       
@@ -48,6 +49,7 @@ export class SignupMentorComponent implements OnInit {
   }
 
   addNew(user) {
+    console.log(user);
     // window.alert('User added');
     this.addUserService.addNew(user);
     this.submitted = true;
