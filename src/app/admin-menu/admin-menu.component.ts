@@ -12,11 +12,18 @@ export class AdminMenuComponent implements OnInit {
 
   currentUser
   loggedin
-
+  users
   constructor(private loginProcess: LoginprocessService,
     // private navbar: NavbarComponent
     private dataReader: DataReaderService,
-    private route: Router) { }
+    private route: Router) { 
+
+      this.dataReader.getJSON('users').subscribe(data => {
+        console.log(data);
+        this.users = data
+      });
+
+    }
 
   ngOnInit() {
     this.currentUser = this.loginProcess.getCurrentUser();

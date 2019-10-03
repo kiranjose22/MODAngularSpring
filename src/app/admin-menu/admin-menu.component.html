@@ -114,59 +114,32 @@
                     </div>
 
                 </h5>
-                <div class="card-body">
-                    <div class="row">
+
+                <div *ngFor="let userdata of users" class="card-body">
+                    <!-- *ngIf="userdata.role!='admin'"  -->
+                    <div *ngIf="userdata.role!='admin'" class="row">
                         <div class="col text-center">
-                            Sam
+                            {{userdata.userName}}
                         </div>
                         <div class="col text-center">
-                            sam777@abc.com
+                            {{userdata.email}}
                         </div>
                         <div class="col text-center">
-                            Trainer
+                            {{userdata.role}}
                         </div>
                         <div class="col text-center">
 
                             <button class="btn btn-success" type="button">Unblock</button>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col text-center">
-                            Eric
-                        </div>
-                        <div class="col text-center">
-                            eric.john@erws.com
-                        </div>
-                        <div class="col text-center">
-                            Trainer
-                        </div>
-                        <div class="col text-center">
-
                             <button class="btn btn-danger" type="button">Block</button>
                         </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col text-center">
-                            Ashok
-                        </div>
-                        <div class="col text-center">
-                            ashok.kumar321@ymail.com
-                        </div>
-                        <div class="col text-center">
-                            Trainee
-                        </div>
-                        <div class="col text-center">
 
-                            <button class="btn btn-danger" type="button">Block</button>
-                        </div>
                     </div>
+                    <!-- <hr> -->
                 </div>
+
+
+
+
 
             </div>
         </div>
