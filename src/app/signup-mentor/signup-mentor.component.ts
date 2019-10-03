@@ -29,11 +29,13 @@ export class SignupMentorComponent implements OnInit {
       timeslot: new FormControl('undefined'),
       
       linkedin: new FormControl(''),
-      skills: new FormControl(''),
+      skills: new FormControl(['na']),
       videos: new FormControl(false),
       blogs: new FormControl(false),
       ppts: new FormControl(false),
       demos: new FormControl(false),
+      startdate: new FormControl(),
+      enddate: new FormControl(),
 
       role: new FormControl('mentor'),
       status: new FormControl('unblocked')

@@ -24,7 +24,20 @@ export class SignupUserComponent implements OnInit {
       phone : new FormControl(''),
       password : new FormControl('',Validators.required),
       role: new FormControl('user'),
-      status: new FormControl('unblocked')
+      status: new FormControl('unblocked'),
+
+      experience: new FormControl(''),
+      timezone: new FormControl('undefined'),
+      timeslot: new FormControl('undefined'),
+      
+      linkedin: new FormControl(''),
+      skills: new FormControl(['na']),
+      videos: new FormControl(false),
+      blogs: new FormControl(false),
+      ppts: new FormControl(false),
+      demos: new FormControl(false),
+      startdate: new FormControl(),
+      enddate: new FormControl(),
     });
    }
 
